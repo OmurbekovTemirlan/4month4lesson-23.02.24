@@ -5,4 +5,10 @@
 //  Created by Apple on 22.2.2024.
 //
 
-import Foundation
+import UIKit
+
+struct myShop {
+    var productImage: UIImage
+    var productName: String
+    var item: String
+}
