@@ -15,16 +15,16 @@ class DetailViewController: UIViewController {
     var isLiked = false
     
     
-    private let backBtn: UIButton = {
-        let btn = UIButton()
-        btn.setImage(UIImage(systemName: "arrow.backward"), for: .normal)
-        btn.backgroundColor = .white
-        btn.layer.cornerRadius = 17
-        btn.addTarget(self, action: #selector(backBtnTapped), for: .touchUpOutside)
-        btn.translatesAutoresizingMaskIntoConstraints = false
-        return btn
-        
-    }()
+//    private let backBtn: UIButton = {
+//        let btn = UIButton()
+//        btn.setImage(UIImage(systemName: "arrow.backward"), for: .normal)
+//        btn.backgroundColor = .white
+//        btn.layer.cornerRadius = 17
+//        btn.addTarget(self, action: #selector(backBtnTapped), for: .touchUpOutside)
+//        btn.translatesAutoresizingMaskIntoConstraints = false
+//        return btn
+//        
+//    }()
     
     private let shareBtn: UIButton = {
         let btn = UIButton()
@@ -197,15 +197,15 @@ class DetailViewController: UIViewController {
             likeBtn.widthAnchor.constraint(equalToConstant: 36)
         ])
         
-        view.addSubview(backBtn)
-        view.bringSubviewToFront(backBtn)
-
-        NSLayoutConstraint.activate([
-            backBtn.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
-            backBtn.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 35),
-            backBtn.heightAnchor.constraint(equalToConstant: 36),
-            backBtn.widthAnchor.constraint(equalToConstant: 36)
-        ])
+//        view.addSubview(backBtn)
+//        view.bringSubviewToFront(backBtn)
+//
+//        NSLayoutConstraint.activate([
+//            backBtn.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
+//            backBtn.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 35),
+//            backBtn.heightAnchor.constraint(equalToConstant: 36),
+//            backBtn.widthAnchor.constraint(equalToConstant: 36)
+//        ])
 
         view.addSubview(shareBtn)
         view.bringSubviewToFront(shareBtn)
@@ -330,9 +330,9 @@ class DetailViewController: UIViewController {
     }
     
     
-        @objc private func backBtnTapped (_ sender: UIButton) {
-            navigationController?.popViewController(animated: true)
-        }
+//        @objc private func backBtnTapped (_ sender: UIButton) {
+//            navigationController?.popViewController(animated: true)
+//        }
     
 
     
