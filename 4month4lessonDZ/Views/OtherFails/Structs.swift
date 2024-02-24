@@ -12,3 +12,13 @@ struct myShop {
     var productName: String
     var item: String
 }
+
+struct myShopDetails {
+    var productImage: UIImage
+    var productName: String
+    var roomTypeDetail: String
+    var colorDetail: String
+    var materialDetail: String
+    var dimensionsDettails: String
+    var weightDetails: String
+}

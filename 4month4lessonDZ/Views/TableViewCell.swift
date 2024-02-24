@@ -8,7 +8,7 @@
 import UIKit
 
 class MyShoptableViewCell: UITableViewCell {
-
+    
     private let uiView: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 12
@@ -16,9 +16,6 @@ class MyShoptableViewCell: UITableViewCell {
         return view
         
     }()
-    
-    
-    
     
     private var productImage: UIImageView = {
         let imageView = UIImageView()
@@ -28,7 +25,7 @@ class MyShoptableViewCell: UITableViewCell {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
-   
+    
     private var productName = MakerView().makerLabel(
         text: "Furniture",
         size: 20,
@@ -36,18 +33,15 @@ class MyShoptableViewCell: UITableViewCell {
         textColor: .black)
     
     private var item = MakerView().makerLabel(
-    text: "785 Items",
-    size: 14,
-    weight: .regular,
-    textColor: .systemGray)
- 
+        text: "785 Items",
+        size: 14,
+        weight: .regular,
+        textColor: .systemGray)
+    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super .init(style: style, reuseIdentifier: reuseIdentifier)
         setupUI()
-        
-        
-        
         
     }
     
@@ -56,7 +50,6 @@ class MyShoptableViewCell: UITableViewCell {
         
     }
     private func setupUI(){
-       
         
         contentView.addSubview(uiView)
         NSLayoutConstraint.activate([
@@ -65,7 +58,7 @@ class MyShoptableViewCell: UITableViewCell {
             uiView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
             uiView.heightAnchor.constraint(equalToConstant: 220),
             uiView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
-
+            
         ])
         
         uiView.addSubview(productImage)

@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     
     
     private var products: [myShop] = []
-    
+    private var detailProduct: [myShopDetails] = []
     
     private var tableView: UITableView = {
         let view = UITableView()
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         
         setupUI()
         setupProduct()
-        
+        setupProductDetail()
     }
     
     private func setupUI(){
@@ -62,6 +62,35 @@ class ViewController: UIViewController {
         products = [product1, product2, product3]
     }
     
+    private func setupProductDetail(){
+        let productDetails1 = myShopDetails(productImage: UIImage(named: "firstScreen")!,
+                                            productName: "AbocoFur Modern Velvet Fabric Lazy Chair",
+                                            roomTypeDetail: "Office, Living Room",
+                                            colorDetail: "Yellow",
+                                            materialDetail: "Textile, Velvet, Cotton",
+                                            dimensionsDettails: "25.6 x 31.5 x 37.4 inches",
+                                            weightDetails: "20.3 Pounds")
+        
+        
+        let productDetails2 = myShopDetails(productImage: UIImage(named: "KitchenwareScreen")!,
+                                            productName: "A quirky and personalized kitchen in a modern studio for work and play",
+                                            roomTypeDetail: "Kitchen Room, Eating",
+                                            colorDetail: "Brown",
+                                            materialDetail: "Metal, Komfortobel",
+                                            dimensionsDettails: "20.6 x 35.5 x 39.4 inches",
+                                            weightDetails: "28.4 Pounds")
+        
+        let productDetails3 = myShopDetails(productImage: UIImage(named: "readinfRoom")!,
+                                            productName: "INSPIRATIONAL STUDY TABLE DESIGNS FOR STUDENTS",
+                                            roomTypeDetail: "Reading room",
+                                            colorDetail: "Brown, White",
+                                            materialDetail: "Metal",
+                                            dimensionsDettails: "29.6 x 35.",
+                                            weightDetails: "20.4 Pounds")
+        
+        
+        detailProduct = [ productDetails1, productDetails2, productDetails3]
+    }
 }
 
 
@@ -69,6 +98,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         products.count
+        
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyShoptableViewCell
@@ -81,9 +111,23 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
+
 extension ViewController: UITableViewDelegate {
-   
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("temirlan")
+        let vc = DetailViewController()
+        
+        let detail = detailProduct[indexPath.row]
+        
+        vc.myShopProductDetails(image: detail.productImage,
+                                producName: detail.productName,
+                                romTypeDetail: detail.roomTypeDetail,
+                                colorrDetail: detail.colorDetail,
+                                materiallDetail: detail.materialDetail,
+                                dimensionssDettails: detail.dimensionsDettails,
+                                weighttDetails: detail.weightDetails)
+      navigationController?.pushViewController(vc, animated: true)
     }
 }
+
+

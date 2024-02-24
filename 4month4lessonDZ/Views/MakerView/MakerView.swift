@@ -65,7 +65,7 @@ class MakerView {
         cornerRadiusBt: CGFloat = 16,
         numberOfLines: CGFloat = 1,
         target: Any? = nil,
-        action: Selector? = nil) -> UIButton {
+        action: Selector? = nil) -> UIButton{
         
         let button = UIButton(type: .system)
         button.setImage(imageBtn, for: state)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		189E4DDD2B88F59B00972C5F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E4DDC2B88F59B00972C5F /* DetailViewController.swift */; };
 		18B0EAF62B866B8D00E5D710 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0EAF52B866B8D00E5D710 /* AppDelegate.swift */; };
 		18B0EAF82B866B8D00E5D710 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0EAF72B866B8D00E5D710 /* SceneDelegate.swift */; };
 		18B0EAFF2B866B9000E5D710 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B0EAFE2B866B9000E5D710 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		189E4DDC2B88F59B00972C5F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		18B0EAF22B866B8D00E5D710 /* 4month4lessonDZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 4month4lessonDZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B0EAF52B866B8D00E5D710 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18B0EAF72B866B8D00E5D710 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				18B0EB2E2B8674B600E5D710 /* Costums */,
 				18B0EB252B8671CF00E5D710 /* ViewController.swift */,
 				18B0EB292B86737100E5D710 /* TableViewCell.swift */,
+				189E4DDC2B88F59B00972C5F /* DetailViewController.swift */,
 				18B0EB2B2B86738100E5D710 /* OtherFails */,
 			);
 			path = Views;
@@ -321,6 +324,7 @@
 				18B0EB2D2B8673DF00E5D710 /* Structs.swift in Sources */,
 				18B0EAF62B866B8D00E5D710 /* AppDelegate.swift in Sources */,
 				18B0EAF82B866B8D00E5D710 /* SceneDelegate.swift in Sources */,
+				189E4DDD2B88F59B00972C5F /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,7 +424,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -477,7 +481,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
