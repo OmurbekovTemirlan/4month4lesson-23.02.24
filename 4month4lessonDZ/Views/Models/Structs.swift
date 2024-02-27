@@ -7,13 +7,15 @@
 
 import UIKit
 
-struct myShop {
+struct MyShop {
     var productImage: UIImage
     var productName: String
     var item: String
+    var detail: MyShopDetails
+    
 }
 
-struct myShopDetails {
+struct MyShopDetails {
     var productImage: UIImage
     var productName: String
     var roomTypeDetail: String

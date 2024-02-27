@@ -9,8 +9,8 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    var detailProduct: myShopDetails?
-    var valuePrice: Float = 0.0
+    var product: MyShop?
+    var valuePrice: Float = 0
     var numberlblValue: Int = 0
     var isLiked = false
     
@@ -170,9 +170,19 @@ class DetailViewController: UIViewController {
         buyBtnSetupUI()
         updatePriceLabel()
         updateUI()
+        
+     navigationItem.hidesBackButton
 
-        navigationItem.hidesBackButton
-
+        if let product = product {
+                    myShopProductDetails(image: product.productImage,
+                                         producName: product.productName,
+                                         romTypeDetail: product.detail.roomTypeDetail,
+                                         colorrDetail: product.detail.colorDetail,
+                                         materiallDetail: product.detail.materialDetail,
+                                         dimensionssDettails: product.detail.dimensionsDettails,
+                                         weighttDetails: product.detail.weightDetails)
+                }
+        
     }
     
     private func setupUI(){
@@ -342,14 +352,14 @@ class DetailViewController: UIViewController {
         numberlbl.text = "\(numberlblValue)"
     }
     @objc private func plusBtnTapedd(_ sender: UIButton){
-        valuePrice += 130
+        valuePrice += 125
         numberlblValue += 1
         updatePriceLabel()
     }
     
     @objc private func minusBtnTapped(_ sender: UIButton){
         if valuePrice > 0.0, numberlblValue > 0 {
-             valuePrice -= 130
+            valuePrice -= 125
             numberlblValue -= 1
             updatePriceLabel()
         }

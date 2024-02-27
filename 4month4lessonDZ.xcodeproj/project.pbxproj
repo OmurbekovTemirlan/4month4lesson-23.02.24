@@ -138,6 +138,8 @@
 			children = (
 				18B0EAF52B866B8D00E5D710 /* AppDelegate.swift */,
 				18B0EAF72B866B8D00E5D710 /* SceneDelegate.swift */,
+				18B0EB322B86765300E5D710 /* Resourse */,
+				18B0EB2F2B86760A00E5D710 /* MakerView */,
 			);
 			path = AppDelgete;
 			sourceTree = "<group>";
@@ -145,27 +147,26 @@
 		18B0EB282B86734600E5D710 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				18B0EB2F2B86760A00E5D710 /* MakerView */,
-				18B0EB2E2B8674B600E5D710 /* Costums */,
 				18B0EB252B8671CF00E5D710 /* ViewController.swift */,
-				18B0EB292B86737100E5D710 /* TableViewCell.swift */,
 				189E4DDC2B88F59B00972C5F /* DetailViewController.swift */,
-				18B0EB2B2B86738100E5D710 /* OtherFails */,
+				18B0EB2E2B8674B600E5D710 /* Costums */,
+				18B0EB2B2B86738100E5D710 /* Models */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		18B0EB2B2B86738100E5D710 /* OtherFails */ = {
+		18B0EB2B2B86738100E5D710 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				18B0EB2C2B8673DF00E5D710 /* Structs.swift */,
 			);
-			path = OtherFails;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		18B0EB2E2B8674B600E5D710 /* Costums */ = {
 			isa = PBXGroup;
 			children = (
+				18B0EB292B86737100E5D710 /* TableViewCell.swift */,
 			);
 			path = Costums;
 			sourceTree = "<group>";
@@ -174,7 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				18B0EB302B86762C00E5D710 /* MakerView.swift */,
-				18B0EB322B86765300E5D710 /* Resourse */,
 			);
 			path = MakerView;
 			sourceTree = "<group>";

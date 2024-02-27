@@ -10,8 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     
-    private var products: [myShop] = []
-    private var detailProduct: [myShopDetails] = []
+    private var products: [MyShop] = []
     
     private var tableView: UITableView = {
         let view = UITableView()
@@ -27,7 +26,6 @@ class ViewController: UIViewController {
         
         setupUI()
         setupProduct()
-        setupProductDetail()
     }
     
     private func setupUI(){
@@ -46,24 +44,8 @@ class ViewController: UIViewController {
     }
     
     private func setupProduct(){
-        let product1 = myShop(
-            productImage:UIImage(named: "firstImage")!,
-            productName: "Furniture",
-            item: "785 Items")
-        let product2 = myShop(
-            productImage: UIImage(named: "secondImage")!,
-            productName: "kitchenware",
-            item: "645 Items")
-        let product3 = myShop(
-            productImage: UIImage(named: "thirdImage")!,
-            productName: "Reading table",
-            item: "Inventory")
         
-        products = [product1, product2, product3]
-    }
-    
-    private func setupProductDetail(){
-        let productDetails1 = myShopDetails(productImage: UIImage(named: "firstScreen")!,
+        let productDetails1 = MyShopDetails(productImage: UIImage(named: "firstScreen")!,
                                             productName: "AbocoFur Modern Velvet Fabric Lazy Chair",
                                             roomTypeDetail: "Office, Living Room",
                                             colorDetail: "Yellow",
@@ -72,7 +54,7 @@ class ViewController: UIViewController {
                                             weightDetails: "20.3 Pounds")
         
         
-        let productDetails2 = myShopDetails(productImage: UIImage(named: "KitchenwareScreen")!,
+        let productDetails2 = MyShopDetails(productImage: UIImage(named: "KitchenwareScreen")!,
                                             productName: "A quirky and personalized kitchen in a modern studio for work and play",
                                             roomTypeDetail: "Kitchen Room, Eating",
                                             colorDetail: "Brown",
@@ -80,7 +62,7 @@ class ViewController: UIViewController {
                                             dimensionsDettails: "20.6 x 35.5 x 39.4 inches",
                                             weightDetails: "28.4 Pounds")
         
-        let productDetails3 = myShopDetails(productImage: UIImage(named: "readinfRoom")!,
+        let productDetails3 = MyShopDetails(productImage: UIImage(named: "readinfRoom")!,
                                             productName: "INSPIRATIONAL STUDY TABLE DESIGNS FOR STUDENTS",
                                             roomTypeDetail: "Reading room",
                                             colorDetail: "Brown, White",
@@ -88,9 +70,27 @@ class ViewController: UIViewController {
                                             dimensionsDettails: "29.6 x 35.",
                                             weightDetails: "20.4 Pounds")
         
+        let product1 = MyShop(
+            productImage:UIImage(named: "firstImage")!,
+            productName: "Furniture",
+            item: "785 Items",
+            detail: productDetails1)
+        let product2 = MyShop(
+            productImage: UIImage(named: "secondImage")!,
+            productName: "kitchenware",
+            item: "645 Items",
+            detail: productDetails2)
+        let product3 = MyShop(
+            productImage: UIImage(named: "thirdImage")!,
+            productName: "Reading table",
+            item: "Inventory",
+            detail: productDetails3)
         
-        detailProduct = [ productDetails1, productDetails2, productDetails3]
+        products = [product1, product2, product3]
     }
+
+    
+   
 }
 
 
@@ -112,22 +112,22 @@ extension ViewController: UITableViewDataSource {
 }
 
 
-extension ViewController: UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = DetailViewController()
+    extension ViewController: UITableViewDelegate {
         
-        let detail = detailProduct[indexPath.row]
-        
-        vc.myShopProductDetails(image: detail.productImage,
-                                producName: detail.productName,
-                                romTypeDetail: detail.roomTypeDetail,
-                                colorrDetail: detail.colorDetail,
-                                materiallDetail: detail.materialDetail,
-                                dimensionssDettails: detail.dimensionsDettails,
-                                weighttDetails: detail.weightDetails)
-      navigationController?.pushViewController(vc, animated: true)
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            let detailVC = DetailViewController()
+            
+            // Создаем продукт, который хотим передать в DetailViewController
+            let product = products[indexPath.row]
+            
+            // Присваиваем его свойству product в DetailViewController
+            detailVC.product = product
+            
+            navigationController?.pushViewController(detailVC, animated: true)
+        }
     }
-}
-
+    
+    
+    
 
